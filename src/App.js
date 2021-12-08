@@ -11,35 +11,31 @@ import {
 
 import SearchGiphy from './components/searchGiphy';
 import About from './components/About'
+import Home from './components/Home';
+import Navi from './components/Navi';
 
 function App() {
   return (
     <div>
     <Router>
       <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="about">About</Link>
-          </li>
-          <li>
-            <Link to='/search-gifs'>Search for Gifs</Link>
-          </li>
-        </ul>
+        <Navi />
+        
       </div>
       <Switch>
-        {/* Route path="/"><Home></Home></Route> */}
+        
       <Route path='/about'>
         <About></About>
+      </Route>
+      <Route path='/search-gifs'>
+        <SearchGiphy></SearchGiphy>
       </Route>
     </Switch>
     </Router>
     
     <div className="App">
       <h1>Hello World</h1>
-      <SearchGiphy></SearchGiphy>
+      
     </div>
     </div>
   );
